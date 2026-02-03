@@ -3,7 +3,7 @@ document.getElementById('greetBtn').addEventListener('click', function () {
     const greeting = document.querySelector('.greeting');
 
     if (name === "") {
-        greeting.textContent = "Hello";
+        greeting.textContent = "Hello!";
     } else {
         greeting.textContent = `Hello, ${name}!`;
     }
@@ -17,4 +17,5 @@ boxes.forEach(box=>{
         box.style.backgroundColor = color;
     });
 });
+
 

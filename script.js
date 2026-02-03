@@ -1,7 +1,13 @@
-document.getElementById('greetBtn').addEventListener('click', function(){
-    const name = document.getElementById('nameInput').value;
-    document.querySelector('.greeting').textContent = `Hello , ${name}!`;
-})
+document.getElementById('greetBtn').addEventListener('click', function () {
+    const name = document.getElementById('nameInput').value.trim();
+    const greeting = document.querySelector('.greeting');
+
+    if (name === "") {
+        greeting.textContent = "Hello";
+    } else {
+        greeting.textContent = `Hello, ${name}!`;
+    }
+});
 
 const boxes = document.querySelectorAll('.box');
 boxes.forEach(box=>{
@@ -11,3 +17,4 @@ boxes.forEach(box=>{
         box.style.backgroundColor = color;
     });
 });
+
